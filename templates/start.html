@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet">
+    <title>Welcome to OTTGame.App</title>
+</head>
+<body>
+<!-- Form share link --!>
+<center>
+    <br><br><br><br><br><br><br><br>
+    <h1>Welcome to OTTgame.App</h1>
+    <!-- The text field -->
+    <h2><a href="http://localhost:5000/play/{{random_id}}" target="_blank">Play Now</a> </h2><br>
+    <input type="text" value="http://localhost:5000/play/{{random_id}}" id="myInput">
+
+    <!-- The button used to copy the text -->
+    <button onclick="myFunction()">Copy</button><br>
+    <a href="play-AI.html">Or Play with AI</a>
+
+    <br><br>
+    Rock Paper Scissors is puzzle game where you need to guess who is winner in this game between two opponents. You need to react fast or you will loose live. Click on the correct answer to play this game.
+
+</center>
+
+<script>
+function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("myInput");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText.value);
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+}
+
+</script>
+</body>
+</html>

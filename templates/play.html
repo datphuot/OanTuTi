@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="/static/assets/css/bootstrap.css?v=1.25">
+	<link href="/static/assets/scss/style.css?v=1.25" rel="stylesheet">
+</head>
+<body>
+    <div class="hello" style="display: none;">
+        <div class="container">
+            <h1>Rock Paper Scissors Game</h1>
+            <span class="hello-des">Invite a friend to settle your petty dispute live over the web</span>
+            <div class="send-link">
+                <span class="send-link_text">Send link below to your opponent to connect</span>
+                <div class="sendlink-box">
+                    <button aria-label="Search" class="button button-search is-link">Copy</button>
+                    <div class="center">
+                    <input name="q" value="ottogame.com/fjhaJH8230" placeholder="ottogame.com/fjhaJH8230" required="" aria-label="Name" class="ainput" type="search" autocomplete="off" autocapitalize="none">
+                    </div>
+                </div>
+            </div>
+            <div class="play-with-ai">
+                <button><span>Or Play with AI</span><img src="/static/img/robot.png" alt=""></button>
+            </div>
+            <img src="/static/img/img.png" class="/static/img-home" alt="">
+            <div class="hello-footer">Rock Paper Scissors is puzzle game where you need to guess who is winner in this game between two opponents. You need to react fast or you will loose live. Click on the correct answer to play this game.</div>
+        </div>
+    </div>
+    <div class="play">
+        <div class="round">
+            <div class="round-info">Round <div id="round"> 1</div></div>
+            <button class="round-reset">Reset</button>
+        </div>
+        <div class="ties">0 Ties</div>
+        <div class="you">
+            <div class="you-box">
+                <div class="score">You <span>0 Win</span></div>
+                <!-- Status -->
+                    <div class="status status-result">
+                        <!-- Ready -->
+                           <!-- Ready!-->
+                        <!-- Ready -->
+                        <img src="/static/img/left-hand02.png" alt="">
+                    </div>
+                <!-- Status -->
+                <div class="picker">
+                    <div class="picker-box" data-bs-toggle="modal">
+                        <button onclick="playGame('bua')" type="button"><img src="/static/img/Frame 13.png" alt=""></button>
+                        <button onclick="playGame('xoe')" type="button"><img src="/static/img/Frame 14.png" alt=""></button>
+                        <button onclick="playGame('keo')" type="button"><img src="/static/img/Frame 15.png" alt=""></button>
+                    </div>
+                    <div class="pick-text">Take your pick</div>
+                </div>
+            </div>
+        </div>
+        <div class="opponent">
+            <div class="opponent-box">
+                <div class="score score_competitor"><span>0 Win</span> Opponent</div>
+                <div class="status status_competitor status-result">
+                    <!-- Picked -->
+                    <img src="/static/img/right-hand02.png" alt="">
+
+                </div>
+                <div class="picker">
+                    <div class="picker-box" data-bs-toggle="modal" data-bs-target="#resultModal">
+                        <button type="button"><img src="/static/img/Frame 16.png" alt=""></button>
+                    </div>
+                    <div class="pick-text">Opponent made a pick</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade result-modal" id="resultModal" tabindex="-1" aria-labelledby="resultModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="show-result">
+                    <img class="wow" src="/static/img/Birthday.png" alt="">
+                    <div class="result-score">YOU WIN! 0 - 3</div>
+                    <div class="result-sharemsg">Share result now!</div>
+                    <div class="sendlink-box">
+                        <button aria-label="Search" class="button button-search is-link">Copy</button>
+                        <div class="center">
+                            <input name="q" value="ottogame.com/fjhaJH8230" placeholder="ottogame.com/fjhaJH8230" required="" aria-label="Name" class="ainput" type="search" autocomplete="off" autocapitalize="none">
+                        </div>
+                    </div>
+                    <div class="share">
+                        <button class="share-item">
+                            <div class="share-container">
+                                <svg height="12" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" role="/static/img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="share-icon"><path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" class=""></path></svg>
+                                <span class="share-line"></span>
+                                <span class="share-brand">facebook</span>
+                            </div>
+                        </button>
+                        <button class="share-item share_twitter">
+                            <div class="share-container">
+                                <svg height="12" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" role="/static/img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-twitter fa-w-16 fa-3x"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" class=""></path></svg>
+                                <span class="share-line"></span>
+                                <span class="share-brand">twitter</span>
+                            </div>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	<script src="/static/assets/js/bootstrap.min.js"></script>
+    <script>
+        let vh = parent.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+        window.addEventListener('resize', () => {
+            myHeight();
+        });
+
+        function playGame(choose) {
+		    var request = new XMLHttpRequest();
+
+		    request.open("GET", "/action/{{random_id}}?choose="+choose);
+
+		    request.onreadystatechange = function() {
+		        if(this.readyState === 4 && this.status === 200) {
+		            obj = JSON.parse(this.response);
+                    document.getElementById("round").innerHTML = obj.ti_so.vong;
+		            // Hiển thị kết quả
+		            alert(obj.ti_so.vong);
+		            console.log(obj);
+		        }
+		    };
+		    request.send();
+		}
+    </script>
+</body>
+</html>
