@@ -1,3 +1,1 @@
-
-print('hello7')
-
+print('hello6')
