@@ -21,6 +21,7 @@ def welcome():
 
 tran dinh luong2
 
+Minh luong 
 
 #màn hình chơi game
 @app.route('/play/<random_id>')
