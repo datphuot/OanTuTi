@@ -12,6 +12,8 @@ app.secret_key = '123456'
 @app.route('/')
 #màn hình start
 def welcome():
+    
+    
     mixchars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
     random_id = "".join(choice(mixchars) for x in range(randint(10, 20)))
     return render_template('start.html', random_id=random_id)
