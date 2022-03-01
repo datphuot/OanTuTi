@@ -8,17 +8,18 @@ import datetime
 app = Flask(__name__)
 app.secret_key = '123456'
 
+
 #url_for('data', filename='random_id.txt')
 @app.route('/')
 #màn hình start
 def welcome():
-    
+    vu dinh dat
     
     mixchars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
     random_id = "".join(choice(mixchars) for x in range(randint(10, 20)))
     return render_template('start.html', random_id=random_id)
 
-tran dinh luong
+tran dinh luong2
 
 
 #màn hình chơi game
@@ -30,6 +31,7 @@ def play(random_id):
         file = open("static/data/" + random_id + ".txt",'rb')
         data_json = pickle.load(file, encoding='latin1')
         file.close()
+
 
         cookie_name = "admin_" + str(random_id)
         if request.cookies.get(cookie_name):
