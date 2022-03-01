@@ -8,6 +8,7 @@ import datetime
 app = Flask(__name__)
 app.secret_key = '123456'
 
+
 #url_for('data', filename='random_id.txt')
 @app.route('/')
 #màn hình start
