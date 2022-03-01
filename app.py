@@ -18,6 +18,8 @@ def welcome():
     random_id = "".join(choice(mixchars) for x in range(randint(10, 20)))
     return render_template('start.html', random_id=random_id)
 
+tran dinh luong
+
 
 #màn hình chơi game
 @app.route('/play/<random_id>')
