@@ -28,6 +28,7 @@ def play(random_id):
         data_json = pickle.load(file, encoding='latin1')
         file.close()
 
+
         cookie_name = "admin_" + str(random_id)
         if request.cookies.get(cookie_name):
             admin = 1
