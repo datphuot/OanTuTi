@@ -19,7 +19,7 @@ def welcome():
     random_id = "".join(choice(mixchars) for x in range(randint(10, 20)))
     return render_template('start.html', random_id=random_id)
 
-tran dinh luong
+tran dinh luong2
 
 
 #màn hình chơi game
